@@ -18,6 +18,13 @@ function divide(num1, num2) {
     };
 };
 
+/* divide function as turnary:
+
+function divideTurn(num1, num2){
+    return num2 != 0 ? num1 / num2 : "ERROR";
+} 
+*/
+
 function operate(num1, num2, operator) {
     return operator(num1, num2);
 };

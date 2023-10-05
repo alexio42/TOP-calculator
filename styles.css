@@ -1,0 +1,24 @@
+* {
+    border: 1px solid black;
+}
+
+#calculator {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #DAFFFB
+}
+
+#container {
+    height: 600px;
+    width: 500px;
+    align-self: center;
+    background-color: #04364A;
+    padding: 10px;
+}
+
+#display {
+    height: 100px;
+    background-color: #F0F0F0;
+    border: 5px solid black;
+}
