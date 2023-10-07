@@ -10,15 +10,39 @@
 }
 
 #container {
-    height: 600px;
-    width: 500px;
+    height: 500px;
+    width: 400px;
     align-self: center;
     background-color: #04364A;
     padding: 10px;
+
 }
 
 #display {
-    height: 100px;
+    height: 90px;
     background-color: #F0F0F0;
     border: 5px solid black;
+   
+}
+
+.row {
+    display: flex;
+    height: 82px;
+    justify-content: space-between;
+    padding: 2px 0;
+    box-sizing: border-box;
+    
+}
+
+.button {
+    flex-basis: 24%;
+    background-color: #64CCC5;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 40pt;
+}
+
+#zero {
+    flex-basis: 49%;
 }
