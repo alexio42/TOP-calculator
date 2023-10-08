@@ -1,5 +1,7 @@
 * {
-    border: 1px solid black;
+    
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #DAFFFB;
 }
 
 
@@ -16,6 +18,7 @@
     align-self: center;
     background-color: #04364A;
     padding: 10px;
+    border: 1px solid black;
 
 }
 
@@ -23,6 +26,10 @@
     height: 90px;
     background-color: #F0F0F0;
     border: 5px solid black;
+    text-align: right;
+    line-height: 95px;
+    font-size: 50pt;
+    padding-right: 5px;
    
 }
 
@@ -32,15 +39,17 @@
     justify-content: space-between;
     box-sizing: border-box;
     background-color: black;
+    border: 2px solid black;
     
 }
 
 .button {
     flex-basis: 24%;
-   background-color: #64CCC5; 
+    background-color: #64CCC5; 
     text-align: center;
     line-height: 80px;
     font-size: 35pt;
+    border-radius: 5px;
 }
 
 #zero {
