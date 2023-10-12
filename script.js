@@ -44,6 +44,8 @@ const plusMinus = document.querySelector("#plus-minus");
 const operators = document.querySelectorAll(".operators")
 const allClear = document.querySelector("#allClear");
 const equals = document.querySelector("#calculate");
+const flip = document.querySelector("button");
+const wholeCalc = document.querySelector("#container")
 
 for (const numKey of numKeys) {
     numKey.addEventListener("click", function() {
@@ -119,7 +121,6 @@ equals.addEventListener("click", function() {
 
     operateFunction = (window[currentOperator]);
     result = calculate(num1, num2, operateFunction);
-    console.log(result);
     displayResult(result);
     clicked(this.id);
 })
@@ -214,3 +215,6 @@ function inputNumKeyboard(key) {
     }
 }
 
+flip.addEventListener("click", function () {
+    display.classList.toggle("flipped");
+});

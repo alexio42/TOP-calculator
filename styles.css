@@ -30,6 +30,7 @@
     line-height: 95px;
     font-size: 50pt;
     padding-right: 5px;
+    font-family: 'Segment7Standard';
    
 }
 
@@ -67,3 +68,21 @@
 .button.operators, #calculate {
     background-color: #FF8F1F;
 }
+
+button {
+    background-color: #FF8F1F;
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 50px;
+    /* border: 3px solid green; */
+  }
+
+  .flipped {
+    transform: scale(-1, -1);
+  }
