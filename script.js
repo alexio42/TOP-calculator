@@ -48,14 +48,7 @@ const equals = document.querySelector("#calculate");
 for (const numKey of numKeys) {
     numKey.addEventListener("click", function() {
 
-    if (startNewNumber === 'yes') {
-        display.textContent = this.textContent;
-        startNewNumber = "";
-    } else if (display.textContent.length < 9) {
-    display.textContent += this.textContent;
-    } else {
-        console.log("Too many numbers in display");
-    };
+    inputNum(this.textContent);
         
     clicked(this.id);
   });
@@ -154,10 +147,70 @@ function displayResult(num) {
     }
 }
 
+function inputNum(num) {
+    if (startNewNumber === 'yes') {
+        display.textContent = num;
+        startNewNumber = "";
+    } else if (display.textContent.length < 9) {
+    display.textContent += num;
+    } else {
+        console.log("Too many numbers in display");
+    };
+}
+
 document.addEventListener("keydown", function(event) {
 
     console.log(event.key);
+    inputNumKeyboard(event.key)
 
   });
 
-function changeDisplay(key) {}
+function inputNumKeyboard(key) {
+
+    switch (key) {
+        case "0":
+            inputNum(key);
+          break;
+
+        case "1":
+            inputNum(key);
+          break;
+
+        case "2":
+            inputNum(key);
+          break;
+
+        case "3":
+            inputNum(key);
+          break;
+
+        case "4":
+            inputNum(key);
+          break;
+
+        case "5":
+            inputNum(key);
+          break;
+        
+        case "6":
+            inputNum(key);
+          break;
+
+        case "7":
+            inputNum(key);
+          break;
+        
+        case "8":
+            inputNum(key);
+          break;
+
+        case "9":
+            inputNum(key);
+          break;
+
+        case "Backspace":
+            display.textContent = display.textContent.slice(0, -1);
+          break;
+    }
+}
+
