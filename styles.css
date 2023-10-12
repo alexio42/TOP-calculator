@@ -60,6 +60,10 @@
     background-color: rgb(30, 144, 255);
 }
 
-.button.operators {
+.clicked {
+    filter: brightness(0.75);
+}
+
+.button.operators, #calculate {
     background-color: #FF8F1F;
 }
