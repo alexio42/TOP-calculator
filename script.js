@@ -1,14 +1,15 @@
 let num1;
 let num2;
 let currentOperator;
+let result;
 let startNewNumber;
 
 function add(num1, num2) {
-    return num1 + num2;
+    return ((num1 * 1000000000) + (num2 *1000000000)) / 1000000000;
 };
 
 function subtract(num1, num2) {
-    return num1 - num2;
+    return ((num1 * 1000000000) - (num2 *1000000000)) / 1000000000;;
 };
 
 function multiply(num1, num2) {
@@ -30,7 +31,7 @@ function divideTurn(num1, num2){
 } 
 */
 
-function operate(num1, num2, operator) {
+function calculate(num1, num2, operator) {
     return operator(num1, num2);
 };
 
@@ -42,6 +43,7 @@ const decimal = document.querySelector("#decimal");
 const plusMinus = document.querySelector("#plus-minus");
 const operators = document.querySelectorAll(".operators")
 const allClear = document.querySelector("#allClear");
+const equals = document.querySelector("#calculate");
 
 for (const numKey of numKeys) {
     numKey.addEventListener("click", function() {
@@ -73,7 +75,6 @@ allClear.addEventListener("click", function() {
     currentOperator = "";
     clicked(this.id);
 });
-
 
 
 
@@ -120,6 +121,17 @@ for (const operation of operators) {
 };
 
 
+equals.addEventListener("click", function() {
+    num2 = Number(display.textContent);
+
+    operateFunction = (window[currentOperator]);
+    result = calculate(num1, num2, operateFunction);
+    console.log(result);
+    displayResult(result);
+    clicked(this.id);
+})
+
+
 
 function clicked(currentKey) {
       
@@ -131,3 +143,21 @@ function clicked(currentKey) {
       activeButton.classList.remove("clicked")
     }, 100);
   };
+
+
+
+function displayResult(num) {
+    if (num.toString().length > 9) {
+        display.textContent = num.toExponential(2);
+    } else {
+        display.textContent = num;
+    }
+}
+
+document.addEventListener("keydown", function(event) {
+
+    console.log(event.key);
+
+  });
+
+function changeDisplay(key) {}
