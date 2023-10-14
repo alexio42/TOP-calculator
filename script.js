@@ -13,7 +13,7 @@ function subtract(num1, num2) {
 };
 
 function multiply(num1, num2) {
-    return num1 * num2;
+    return ((num1 * 10000) * (num2 * 10000) / 100000000);
 };
 
 function divide(num1, num2) {
@@ -139,14 +139,17 @@ function clicked(currentKey) {
   };
 
 
-
-function displayResult(num) {
-    if (num.toString().length > 9) {
-        display.textContent = num.toExponential(2);
+  function displayResult(num) {
+    if (num < 0.0000001) {
+         display.textContent = num.toExponential(2);
+    } else if (num > 999999999) {
+         display.textContent = num.toExponential(2);
     } else {
-        display.textContent = num;
+         let textNum = num.toString();
+         display.textContent = textNum.slice(0, 9);
     }
-}
+};
+
 
 function inputNum(num) {
     if (startNewNumber === 'yes') {
