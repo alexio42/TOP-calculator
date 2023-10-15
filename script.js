@@ -141,7 +141,6 @@ equals.addEventListener("click", function() {
 
 
 
-
 function clicked(currentKey) {
       
     let activeButton = document.querySelector("#" + currentKey);
@@ -236,43 +235,3 @@ function inputNumKeyboard(key) {
 flip.addEventListener("click", function () {
     display.classList.toggle("flipped");
 });
-
-
-// for (const operation of operators) {
-//   operation.addEventListener("click", function() {
-
-//   if (clickedOnce = 'yes'){
-//     num2 = Number(display.textContent);
-//     operateFunction = (window[currentOperator]);
-//     result = calculate(num1, num2, operateFunction);
-//     displayResult(result);
-//     clicked(this.id);
-//     currentOperator = this.id;
-    
-//   } else {
-//   currentOperator = this.id; 
-//   clickedOnce = 'yes';  
-//       if (display.textContent == "") {
-//       num1 = 0
-//   } else {
-//       num1 = Number(display.textContent);
-//   };
-//   };
-
-  
-//   clicked(this.id);
-//   startNewNumber = 'yes';
-
-//   });
-// };
-
-
-// equals.addEventListener("click", function() {
-//     num2 = Number(display.textContent);
-
-//     operateFunction = (window[currentOperator]);
-//     result = calculate(num1, num2, operateFunction);
-//     displayResult(result);
-//     clicked(this.id);
-//     currentOperator = '';
-// });
